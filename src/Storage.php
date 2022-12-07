@@ -8,9 +8,9 @@ use RecursiveIteratorIterator;
 
 class Storage
 {
-    public static function removeEmptyDirectories(String $path): void
+    public static function removeEmptyDirectories(string $dir): void
     {
-        foreach (new RecursiveIteratorIterator(new RecursiveDirectoryIterator($path), RecursiveIteratorIterator::CHILD_FIRST) as $file) {
+        foreach (new RecursiveIteratorIterator(new RecursiveDirectoryIterator($dir), RecursiveIteratorIterator::CHILD_FIRST) as $file) {
             $pathname = $file->getPathname();
 
             if (
@@ -23,7 +23,7 @@ class Storage
         }
     }
 
-    public static function isDirEmpty(String $dir): bool
+    public static function isDirEmpty(string $dir): bool
     {
         return !(new FilesystemIterator($dir))->valid();
     }
