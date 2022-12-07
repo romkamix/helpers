@@ -1,0 +1,17 @@
+{
+  "name": "romkamix/helpers",
+  "type": "project",
+  "description": "",
+  "keywords": [],
+  "license": "MIT",
+  "require": {
+    "php": "^7.3|^8.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "Rmx\\": "src/"
+    }
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true
+}
